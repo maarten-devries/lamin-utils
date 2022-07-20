@@ -1,7 +1,5 @@
-from lamin_logger import ExampleClass, example_function
+from lamin_logger import logger
 
 
-def test_dummy():
-    assert example_function("A") == "a"
-    ex = ExampleClass(1)
-    assert ex.bar() == "hello"
+def test_logger():
+    assert logger.level("INFO").name == "INFO"
