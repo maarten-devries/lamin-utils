@@ -9,7 +9,6 @@ This is the complete API reference:
 .. autosummary::
    :toctree: .
 
-   logger
    colors
 """
 
