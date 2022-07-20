@@ -1,7 +1,6 @@
-from lamin_logger import ExampleClass, example_function
+from lamin_logger import colors, logger
 
 
-def test_dummy():
-    assert example_function("A") == "a"
-    ex = ExampleClass(1)
-    assert ex.bar() == "hello"
+def test_logger():
+    assert logger.level("INFO").name == "INFO"
+    assert colors.green("text") == "\x1b[1;92mtest\x1b[0m"
