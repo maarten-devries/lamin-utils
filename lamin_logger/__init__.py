@@ -12,6 +12,6 @@ This is the complete API reference:
    colors
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from ._core import colors, logger  # noqa
