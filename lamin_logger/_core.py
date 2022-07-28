@@ -1,10 +1,10 @@
-import os
+import platform
 import sys
 
 from loguru import logger
 
-if os.name == "nt":
-    format = "{message}"
+if platform.system() == "Windows":
+    format = "{level.name} {message}"
 else:
     format = "{level.icon} {message}"
 
