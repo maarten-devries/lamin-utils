@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
-⏪ Revert the previous PR | [11](https://github.com/laminlabs/lamin-logger/pull/11) | [sunnyosun](https://github.com/sunnyosun) | 2022-10-20 |
+⏪ Revert the previous PR | [11](https://github.com/laminlabs/lamin-logger/pull/11) | [sunnyosun](https://github.com/sunnyosun) | 2022-10-20 | 0.1.5
 🩹 Suppress numexpr warnings | [10](https://github.com/laminlabs/lamin-logger/pull/10) | [sunnyosun](https://github.com/sunnyosun) | 2022-10-20 | 0.1.4
 🚸 Silence boto3 logger | [9](https://github.com/laminlabs/lamin-logger/pull/9) | [falexwolf](https://github.com/falexwolf) | 2022-08-08 | 0.1.3
 🚧 Trying to fix emoji display in windows | [7](https://github.com/laminlabs/lamin-logger/pull/7) | [sunnyosun](https://github.com/sunnyosun) | 2022-07-28 | 0.1.2
