@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+👷 Added python version warning and extened CI to py3.7-3.11 | [12](https://github.com/laminlabs/lamin-logger/pull/12) | [sunnyosun](https://github.com/sunnyosun) | 2023-01-11 |
 ⏪ Revert the previous PR | [11](https://github.com/laminlabs/lamin-logger/pull/11) | [sunnyosun](https://github.com/sunnyosun) | 2022-10-20 | 0.1.5
 🩹 Suppress numexpr warnings | [10](https://github.com/laminlabs/lamin-logger/pull/10) | [sunnyosun](https://github.com/sunnyosun) | 2022-10-20 | 0.1.4
 🚸 Silence boto3 logger | [9](https://github.com/laminlabs/lamin-logger/pull/9) | [falexwolf](https://github.com/falexwolf) | 2022-08-08 | 0.1.3
