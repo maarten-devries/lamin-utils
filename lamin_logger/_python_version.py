@@ -16,6 +16,6 @@ def py_version_warning(min_v: str, max_v: str):
 
     if py_version >= version.parse(max_v_plus_1) or py_version < version.parse(min_v):
         logger.warning(
-            f"You are running {py_version}\nPython versions < {min_v} or >="
-            f" {max_v_plus_1} are currently not tested, use at your own risk."
+            f"You are running {py_version}\nOnly python versions {min_v}~"
+            f"{max_v} are currently tested, use at your own risk."
         )
