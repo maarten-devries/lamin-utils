@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
-🚸 Set default level to INFO | [14](https://github.com/laminlabs/lamin-logger/pull/14) | [falexwolf](https://github.com/falexwolf) | 2023-01-24 |
+🚸 Set default level to INFO | [14](https://github.com/laminlabs/lamin-logger/pull/14) | [falexwolf](https://github.com/falexwolf) | 2023-01-24 | 0.2.3
 🔥 Manually provide versions for py_version_warning | [13](https://github.com/laminlabs/lamin-logger/pull/13) | [sunnyosun](https://github.com/sunnyosun) | 2023-01-12 | 0.2.2
 👷 Added python version warning and extened CI to py3.7-3.11 | [12](https://github.com/laminlabs/lamin-logger/pull/12) | [sunnyosun](https://github.com/sunnyosun) | 2023-01-11 | 0.2.0
 ⏪ Revert the previous PR | [11](https://github.com/laminlabs/lamin-logger/pull/11) | [sunnyosun](https://github.com/sunnyosun) | 2022-10-20 | 0.1.5
