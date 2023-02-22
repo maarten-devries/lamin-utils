@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
-🚸 Add all botocore subloggers | [16](https://github.com/laminlabs/lamin-logger/pull/16) | [falexwolf](https://github.com/falexwolf) | 2023-02-22 |
+🚸 Add all botocore subloggers | [16](https://github.com/laminlabs/lamin-logger/pull/16) | [falexwolf](https://github.com/falexwolf) | 2023-02-22 | 0.3rc1
 🔇 Suppress "Found credentials..." logging in aiobotocore | [15](https://github.com/laminlabs/lamin-logger/pull/15) | [sunnyosun](https://github.com/sunnyosun) | 2023-02-06 | 0.2.4
 🚸 Set default level to INFO | [14](https://github.com/laminlabs/lamin-logger/pull/14) | [falexwolf](https://github.com/falexwolf) | 2023-01-24 | 0.2.3
 🔥 Manually provide versions for py_version_warning | [13](https://github.com/laminlabs/lamin-logger/pull/13) | [sunnyosun](https://github.com/sunnyosun) | 2023-01-12 | 0.2.2
