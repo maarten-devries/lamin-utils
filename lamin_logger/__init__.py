@@ -12,7 +12,7 @@ This is the complete API reference:
    colors
 """
 
-__version__ = "0.3rc1"
+__version__ = "0.3.0"
 
 from . import _configure_external  # noqa
 from ._core import colors, logger  # noqa

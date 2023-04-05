@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
-:sparkles: Add hint level | [17](https://github.com/laminlabs/lamin-logger/pull/17) | [falexwolf](https://github.com/falexwolf) | 2023-04-05 |
+:sparkles: Add hint level | [17](https://github.com/laminlabs/lamin-logger/pull/17) | [falexwolf](https://github.com/falexwolf) | 2023-04-05 | 0.3.0
 🚸 Add all botocore subloggers | [16](https://github.com/laminlabs/lamin-logger/pull/16) | [falexwolf](https://github.com/falexwolf) | 2023-02-22 | 0.3rc1
 🔇 Suppress "Found credentials..." logging in aiobotocore | [15](https://github.com/laminlabs/lamin-logger/pull/15) | [sunnyosun](https://github.com/sunnyosun) | 2023-02-06 | 0.2.4
 🚸 Set default level to INFO | [14](https://github.com/laminlabs/lamin-logger/pull/14) | [falexwolf](https://github.com/falexwolf) | 2023-01-24 | 0.2.3
