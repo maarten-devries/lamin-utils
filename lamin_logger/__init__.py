@@ -14,6 +14,5 @@ This is the complete API reference:
 
 __version__ = "0.3.2"
 
-from . import _configure_external  # noqa
 from ._core import colors, logger  # noqa
 from ._python_version import py_version_warning  # noqa
