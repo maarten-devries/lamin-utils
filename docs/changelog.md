@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+🚚 Temporarily added lookup | [20](https://github.com/laminlabs/lamin-logger/pull/20) | [falexwolf](https://github.com/falexwolf) | 2023-06-14 |
 ✨ Added download level, changed info icon to 💬 | [19](https://github.com/laminlabs/lamin-logger/pull/19) | [sunnyosun](https://github.com/sunnyosun) | 2023-05-27 | 0.3.2
 :sparkles: Add hint level | [17](https://github.com/laminlabs/lamin-logger/pull/17) | [falexwolf](https://github.com/falexwolf) | 2023-04-05 | 0.3.0
 🚸 Add all botocore subloggers | [16](https://github.com/laminlabs/lamin-logger/pull/16) | [falexwolf](https://github.com/falexwolf) | 2023-02-22 | 0.3rc1
