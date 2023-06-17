@@ -54,19 +54,53 @@ def test_map_synonyms(genes):
 def test_map_synonyms_return_mapper(genes):
     gene_symbols, df = genes
 
-    mapping = map_synonyms(
+    mapper = map_synonyms(
         df=df, identifiers=gene_symbols, field="symbol", return_mapper=True
     )
 
-    expected_synonym_mapping = {"FANCD1": "BRCA2"}
+    assert mapper == {"FANCD1": "BRCA2"}
 
-    assert mapping == expected_synonym_mapping
+
+def test_map_synonyms_empty_values(genes):
+    _, df = genes
+
+    result = map_synonyms(
+        df=df,
+        identifiers=["", " ", None, "CD3", "FANCD1"],
+        field="symbol",
+        return_mapper=False,
+    )
+    assert result == ["", " ", None, "CD3", "BRCA2"]
+
+    mapper = map_synonyms(
+        df=df,
+        identifiers=["", " ", None, "CD3", "FANCD1"],
+        field="symbol",
+        return_mapper=True,
+    )
+    assert mapper == {"FANCD1": "BRCA2"}
 
 
 def test_unsupported_field(genes):
     gene_symbols, df = genes
     with pytest.raises(KeyError):
         map_synonyms(df=df, identifiers=gene_symbols, field="name", return_mapper=False)
+    with pytest.raises(KeyError):
+        map_synonyms(
+            df=df,
+            identifiers=gene_symbols,
+            field="symbol",
+            synonyms_field="name",
+            return_mapper=False,
+        )
+    with pytest.raises(KeyError):
+        map_synonyms(
+            df=df,
+            identifiers=gene_symbols,
+            field="symbol",
+            synonyms_field="symbol",
+            return_mapper=False,
+        )
 
 
 def test_explode_aggregated_column_to_expand(genes):
@@ -80,4 +114,19 @@ def test_explode_aggregated_column_to_expand(genes):
         df=df, aggregated_col="synonyms", target_col="symbol"
     )
     assert res.index.name == "synonyms"
-    assert res.shape == (27, 1)
+    assert res.shape == (26, 1)
+
+    with pytest.raises(KeyError):
+        explode_aggregated_column_to_expand(df=df, aggregated_col="name")
+
+    res = explode_aggregated_column_to_expand(
+        df=df, aggregated_col="synonyms", target_col=None
+    )
+    assert "index" in res.columns
+    assert df.index.name == "index"
+
+    df.index.name = "index-name"
+    res = explode_aggregated_column_to_expand(
+        df=df, aggregated_col="synonyms", target_col=None
+    )
+    assert "index-name" in res.columns
