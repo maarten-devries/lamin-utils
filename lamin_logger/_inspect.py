@@ -32,6 +32,21 @@ def inspect(
     """
     import pandas as pd
 
+    def unique_rm_empty(idx: pd.Index):
+        idx = idx.unique()
+        return idx[(idx != "") & (~idx.isnull())]
+
+    uniq_identifiers = unique_rm_empty(pd.Index(identifiers)).tolist()
+    # empty DataFrame or input
+    if df.shape[0] == 0 or len(uniq_identifiers) == 0:
+        if return_df:
+            return pd.DataFrame(index=identifiers, data={"__mapped__": False})
+        else:
+            return {
+                "mapped": [],
+                "not_mapped": uniq_identifiers,
+            }
+
     # check if index is compliant
     mapped_df = check_if_ids_in_field_values(
         identifiers=identifiers,
@@ -49,10 +64,6 @@ def inspect(
                 "Detected inconsistent casing of mapped terms!\n   For best practice,"
                 " standardize casing via '.map_synonyms()'"
             )
-
-    def unique_rm_empty(idx: pd.Index):
-        idx = idx.unique()
-        return idx[(idx != "") & (~idx.isnull())]
 
     mapped = unique_rm_empty(mapped_df.index[mapped_df["__mapped__"]]).tolist()
     unmapped = unique_rm_empty(mapped_df.index[~mapped_df["__mapped__"]]).tolist()
