@@ -12,7 +12,7 @@ This is the complete API reference:
    colors
 """
 
-__version__ = "0.7.2"
+__version__ = "0.7.3"
 
 from ._core import colors  # noqa
 from ._logger import logger
