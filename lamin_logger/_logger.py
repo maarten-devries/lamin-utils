@@ -146,14 +146,9 @@ class _LogFormatter(logging.Formatter):
         format_orig = self._style._fmt
         self._style._fmt = self.base_format(record)
         if record.time_passed:  # type: ignore
-            # strip microseconds
-            if record.time_passed.microseconds:  # type: ignore
-                record.time_passed = timedelta(  # type: ignore
-                    seconds=int(record.time_passed.total_seconds())  # type: ignore
-                )
             if "{time_passed}" in record.msg:
                 record.msg = record.msg.replace(
-                    "{time_passed}", str(record.time_passed)  # type: ignore
+                    "{time_passed}", record.time_passed  # type: ignore
                 )
             else:
                 self._style._fmt += " ({time_passed})"
