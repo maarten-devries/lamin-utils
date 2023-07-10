@@ -46,6 +46,7 @@ def search(
 
     # search against each of the synonyms
     if (synonyms_field in df.columns) and (synonyms_field != field):
+        # creates field_value:synonym
         mapper = explode_aggregated_column_to_map(
             df,
             agg_col=synonyms_field,  # type:ignore
@@ -55,9 +56,11 @@ def search(
         )
         if keep is False:
             mapper = mapper.explode()
-        for v in df[field]:
-            if v not in mapper:
-                mapper.loc[v] = v
+        # adds field_value:field_value
+        df_field = pd.Series(df[field].values, index=df[field], name=field)
+        df_field.index.name = synonyms_field
+        df_field = df_field[df_field.index.difference(mapper.index)]
+        mapper = pd.concat([mapper, df_field])
         df_exp = mapper.reset_index()
         target_column = synonyms_field
     else:
@@ -65,16 +68,18 @@ def search(
             logger.warning(
                 "Input field is the same as synonyms field, skipping synonyms matching"
             )
-        df_exp = df.copy()
+        df_exp = df[[field]].copy()
         target_column = field
 
     # add matching scores as a __ratio__ column
     df_exp["__ratio__"] = _fuzz_ratio(
         string=string, iterable=df_exp[target_column], case_sensitive=case_sensitive
     )
+    # only keep the max score between field and synonyms for each entry
     df_exp_grouped = (
-        df_exp.groupby(field).max().sort_values("__ratio__", ascending=False)
+        df_exp.groupby(field).max("__ratio__").sort_values("__ratio__", ascending=False)
     )
+    # subset to original field values (as synonyms were mixed in before)
     df_exp_grouped = df_exp_grouped[df_exp_grouped.index.isin(df[field])]
     df_scored = df.set_index(field).loc[df_exp_grouped.index]
     df_scored["__ratio__"] = df_exp_grouped["__ratio__"]
