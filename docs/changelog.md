@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+🎨 Return None if searching against Nones | [38](https://github.com/laminlabs/lamin-logger/pull/38) | [sunnyosun](https://github.com/sunnyosun) | 2023-07-18 |
 🎨 Always return df for `search`, added `limit=` | [37](https://github.com/laminlabs/lamin-logger/pull/37) | [sunnyosun](https://github.com/sunnyosun) | 2023-07-17 | 0.8.0
 🐛 Fix map_synonyms bug | [36](https://github.com/laminlabs/lamin-logger/pull/36) | [sunnyosun](https://github.com/sunnyosun) | 2023-07-14 | 0.7.7
 ⚡️ Speed up search 150x | [35](https://github.com/laminlabs/lamin-logger/pull/35) | [sunnyosun](https://github.com/sunnyosun) | 2023-07-10 | 0.7.6
