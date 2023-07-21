@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+💚 Fix | [41](https://github.com/laminlabs/lamin-utils/pull/41) | [falexwolf](https://github.com/falexwolf) | 2023-07-21 |
 🚚 Rename `lamin_logger` to `lamin_utils` | [40](https://github.com/laminlabs/lamin-utils/pull/40) | [falexwolf](https://github.com/falexwolf) | 2023-07-21 |
 🎨 Fix for duplicated values in search | [39](https://github.com/laminlabs/lamin-logger/pull/39) | [sunnyosun](https://github.com/sunnyosun) | 2023-07-19 |
 🎨 Return None if searching against Nones | [38](https://github.com/laminlabs/lamin-logger/pull/38) | [sunnyosun](https://github.com/sunnyosun) | 2023-07-18 |
