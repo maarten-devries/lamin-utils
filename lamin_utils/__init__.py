@@ -1,6 +1,6 @@
 """Lamin Utils."""
 
-__version__ = "0.9.5"
+__version__ = "0.9.6"
 
 from ._core import colors  # noqa
 from ._logger import logger
