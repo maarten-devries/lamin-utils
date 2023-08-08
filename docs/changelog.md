@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+♻️ Refactored validate and inspect | [52](https://github.com/laminlabs/lamin-utils/pull/52) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-08 |
 ✨ Add InspectResult | [51](https://github.com/laminlabs/lamin-utils/pull/51) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-07 |
 🎨 Rename download to save logging level | [50](https://github.com/laminlabs/lamin-utils/pull/50) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-07 | 0.9.5
 🎨 Simplified params in inspect | [48](https://github.com/laminlabs/lamin-utils/pull/48) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-06 | 0.9.4
