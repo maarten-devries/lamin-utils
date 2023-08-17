@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+🎨 Updated save and warning emojis | [54](https://github.com/laminlabs/lamin-utils/pull/54) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-17 |
 🔊 Updated logging msg to use standardize | [53](https://github.com/laminlabs/lamin-utils/pull/53) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-16 |
 ♻️ Refactored validate and inspect | [52](https://github.com/laminlabs/lamin-utils/pull/52) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-08 |
 ✨ Add InspectResult | [51](https://github.com/laminlabs/lamin-utils/pull/51) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-07 |
