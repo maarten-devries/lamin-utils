@@ -10,6 +10,7 @@ def map_synonyms(
     *,
     case_sensitive: bool = False,
     return_mapper: bool = False,
+    mute: bool = False,
     synonyms_field: str = "synonyms",
     sep: str = "|",
     keep: Literal["first", "last", False] = "first",
@@ -40,12 +41,15 @@ def map_synonyms(
     """
     import pandas as pd
 
+    identifiers = list(identifiers)
+
     # empty DataFrame or input
-    if df.shape[0] == 0 or len(list(identifiers)) == 0:
+    n_input = len(identifiers)
+    if df.shape[0] == 0 or n_input == 0:
         if return_mapper:
             return {}
         else:
-            return list(identifiers)
+            return identifiers
 
     if field not in df.columns:
         raise KeyError(
@@ -92,13 +96,17 @@ def map_synonyms(
     mapped_df.index = mapped_df["orig_ids"]
     mapped = mapped_df["__agg__"].map({**field_map.to_dict(), **syn_map})
 
+    n_mapped = (~mapped.isna()).sum()
+    if n_mapped > 0 and not mute:
+        logger.info(f"standardized {n_mapped}/{n_input} terms")
+
     if return_mapper:
         # only returns mapped synonyms
         mapper = mapped[~mapped.isna()].to_dict()
         mapper = {k: v for k, v in mapper.items() if k != v}
         if keep is False:
             logger.warning(
-                "Returning mapper might contain lists as values when 'keep=False'"
+                "returning mapper might contain lists as values when 'keep=False'"
             )
             return {k: v[0] if len(v) == 1 else v for k, v in mapper.items()}
         else:
@@ -107,7 +115,7 @@ def map_synonyms(
         # returns a list in the input order with synonyms replaced
         mapped_list = mapped.fillna(mapped_df["orig_ids"]).tolist()
         if keep is False:
-            logger.warning("Returning list might contain lists when 'keep=False'")
+            logger.warning("returning list might contain lists when 'keep=False'")
             return [
                 v[0] if isinstance(v, list) and len(v) == 1 else v for v in mapped_list
             ]
