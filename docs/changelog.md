@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+🔊 Improved logging of inspect | [58](https://github.com/laminlabs/lamin-utils/pull/58) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-22 |
 🩹 Also logs if no ref | [57](https://github.com/laminlabs/lamin-utils/pull/57) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-18 |
 🔊 Improved validate logging | [56](https://github.com/laminlabs/lamin-utils/pull/56) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-18 | 0.10.2
 🔇 No warning is logged if all validated | [55](https://github.com/laminlabs/lamin-utils/pull/55) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-17 |
