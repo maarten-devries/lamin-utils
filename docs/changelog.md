@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
-🚑️ Fix map_synonyms bug | [60](https://github.com/laminlabs/lamin-utils/pull/60) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-31 |
+🚑️ Fix map_synonyms bug | [60](https://github.com/laminlabs/lamin-utils/pull/60) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-31 | 0.10.5
 🔊 Improved inspect logging | [59](https://github.com/laminlabs/lamin-utils/pull/59) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-22 |
 🔊 Improved logging of inspect | [58](https://github.com/laminlabs/lamin-utils/pull/58) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-22 |
 🩹 Also logs if no ref | [57](https://github.com/laminlabs/lamin-utils/pull/57) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-18 |
