@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
-✨ Added print level for prining messages | [63](https://github.com/laminlabs/lamin-utils/pull/63) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-11 |
+✨ Added print and important logging level | [63](https://github.com/laminlabs/lamin-utils/pull/63) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-11 | 0.11.0
 ✨ Added return_field to lookup | [62](https://github.com/laminlabs/lamin-utils/pull/62) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-08 |
 🎨 Switch to WRatio and default to limit=20 for search | [61](https://github.com/laminlabs/lamin-utils/pull/61) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-04 | 0.10.6
 🚑️ Fix map_synonyms bug | [60](https://github.com/laminlabs/lamin-utils/pull/60) | [sunnyosun](https://github.com/sunnyosun) | 2023-08-31 | 0.10.5
