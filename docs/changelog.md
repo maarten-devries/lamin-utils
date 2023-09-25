@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+🔊 Only logs if input is not empty | [67](https://github.com/laminlabs/lamin-utils/pull/67) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-25 |
 🎨 Inspect always logs | [66](https://github.com/laminlabs/lamin-utils/pull/66) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-14 |
 🔊 Use emoji for Windows | [65](https://github.com/laminlabs/lamin-utils/pull/65) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-14 |
 🔥 Remove emoji for print | [64](https://github.com/laminlabs/lamin-utils/pull/64) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-11 |
