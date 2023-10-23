@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+🔊 Add a warning for large numbers of lookup items | [69](https://github.com/laminlabs/lamin-utils/pull/69) | [sunnyosun](https://github.com/sunnyosun) | 2023-10-23 |
 🐛 Fix logging on Windows | [68](https://github.com/laminlabs/lamin-utils/pull/68) | [Koncopd](https://github.com/Koncopd) | 2023-10-03 | 0.11.4
 🔊 Only logs if input is not empty | [67](https://github.com/laminlabs/lamin-utils/pull/67) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-25 |
 🎨 Inspect always logs | [66](https://github.com/laminlabs/lamin-utils/pull/66) | [sunnyosun](https://github.com/sunnyosun) | 2023-09-14 |
