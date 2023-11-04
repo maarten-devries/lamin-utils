@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
-🚑️ Going back to QRatio | [71](https://github.com/laminlabs/lamin-utils/pull/71) | [sunnyosun](https://github.com/sunnyosun) | 2023-11-04 |
+🚑️ Going back to QRatio | [71](https://github.com/laminlabs/lamin-utils/pull/71) | [sunnyosun](https://github.com/sunnyosun) | 2023-11-04 | 0.11.7
 ♻️ Default search to token_set_ratio for multi words | [70](https://github.com/laminlabs/lamin-utils/pull/70) | [sunnyosun](https://github.com/sunnyosun) | 2023-11-04 | 0.11.6
 🔊 Add a warning for large numbers of lookup items | [69](https://github.com/laminlabs/lamin-utils/pull/69) | [sunnyosun](https://github.com/sunnyosun) | 2023-10-23 |
 🐛 Fix logging on Windows | [68](https://github.com/laminlabs/lamin-utils/pull/68) | [Koncopd](https://github.com/Koncopd) | 2023-10-03 | 0.11.4
