@@ -3,7 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
-✨ Add `return_field` to `standardize` | [72](https://github.com/laminlabs/lamin-utils/pull/72) | [sunnyosun](https://github.com/sunnyosun) | 2023-12-02 |
+✨ Add `return_field` to `standardize` | [72](https://github.com/laminlabs/lamin-utils/pull/72) | [sunnyosun](https://github.com/sunnyosun) | 2023-12-02 | 0.12.0
 🚑️ Going back to QRatio | [71](https://github.com/laminlabs/lamin-utils/pull/71) | [sunnyosun](https://github.com/sunnyosun) | 2023-11-04 | 0.11.7
 ♻️ Default search to token_set_ratio for multi words | [70](https://github.com/laminlabs/lamin-utils/pull/70) | [sunnyosun](https://github.com/sunnyosun) | 2023-11-04 | 0.11.6
 🔊 Add a warning for large numbers of lookup items | [69](https://github.com/laminlabs/lamin-utils/pull/69) | [sunnyosun](https://github.com/sunnyosun) | 2023-10-23 |
