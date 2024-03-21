@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+🐛 Fix ZeroDivisionError in `inspect` | [75](https://github.com/laminlabs/lamin-utils/pull/75) | [sunnyosun](https://github.com/sunnyosun) | 2024-03-21 |
 ✨ Add base62 encoding | [73](https://github.com/laminlabs/lamin-utils/pull/73) | [falexwolf](https://github.com/falexwolf) | 2023-12-22 | 0.13.0
 ✨ Add `return_field` to `standardize` | [72](https://github.com/laminlabs/lamin-utils/pull/72) | [sunnyosun](https://github.com/sunnyosun) | 2023-12-02 | 0.12.0
 🚑️ Going back to QRatio | [71](https://github.com/laminlabs/lamin-utils/pull/71) | [sunnyosun](https://github.com/sunnyosun) | 2023-11-04 | 0.11.7
