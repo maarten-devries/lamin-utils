@@ -226,3 +226,20 @@ def set_verbosity(logger, verbosity: int):
 
 
 RootLogger.set_verbosity = set_verbosity  # type: ignore
+
+
+def mute(logger):
+    """Context manager to mute logger."""
+
+    class Muted:
+        def __enter__(self):
+            self.original_verbosity = logger._verbosity
+            logger.set_verbosity(0)
+
+        def __exit__(self, exc_type, exc_val, exc_tb):
+            logger.set_verbosity(self.original_verbosity)
+
+    return Muted()
+
+
+RootLogger.mute = mute  # type: ignore
