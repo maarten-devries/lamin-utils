@@ -1,31 +1,46 @@
-from typing import Any, Literal, Optional, Union
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, Literal
 
 from lamin_utils import logger
 
+if TYPE_CHECKING:
+    import pandas as pd
+
 
 def search(
-    df: Any,
+    df: pd.DataFrame,
     string: str,
     field: str = "name",
-    limit: Optional[int] = 20,
-    synonyms_field: Union[str, None] = "synonyms",
+    limit: int | None = 20,
+    synonyms_field: str | None = "synonyms",
     case_sensitive: bool = False,
     synonyms_sep: str = "|",
     keep: Literal["first", "last", False] = "first",
-) -> Any:
+) -> pd.DataFrame:
     """Search a given string against a field.
 
     Args:
-        string: The input string to match against the field ontology values.
-        field: The field against which the input string is matching.
-        synonyms_field: Also map against in the synonyms
-            If None, no mapping against synonyms.
-        case_sensitive: Whether the match is case sensitive.
-        limit: maximum amount of top results to return.
-            If None, return all results.
+        df: The DataFrame to search in.
+        string: The input string to match against the field values.
+        field: The name of the field to search against.
+        limit: The maximum number of top results to return. If None, returns all results.
+        synonyms_field: The name of the field containing synonyms.
+            If None, no synonym matching is performed.
+        case_sensitive: Whether the match should be case sensitive. Defaults to False.
+        synonyms_sep: The separator used in the synonyms field.
+        keep: Determines which duplicates to keep when grouping results.
+            Options are "first", "last", or False (keep all).
 
     Returns:
-        A DataFrame of ranked results.
+        A DataFrame of ranked search results.
+        This DataFrame contains the matched rows from the input DataFrame,
+        sorted by the match ratio in descending order.
+        It includes all columns from the input DataFrame plus an additional '__ratio__' column indicating the match score.
+
+    Raises:
+        KeyError: If the specified field or synonyms_field is not found in the DataFrame.
+        ValueError: If an invalid value is provided for the 'keep' parameter.
     """
     import pandas as pd
 
@@ -35,7 +50,7 @@ def search(
         string: str,
         iterable: pd.Series,
         case_sensitive: bool = True,
-        limit: Optional[int] = None,
+        limit: int | None = None,
     ):
         from rapidfuzz import fuzz, process, utils
 
