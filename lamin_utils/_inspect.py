@@ -41,12 +41,12 @@ class InspectResult:
 
     @property
     def validated(self) -> list[str]:
-        """List of successfully :meth:`lamindb.Curate.validate` validated items."""
+        """List of successfully :meth:`~lamindb.core.CanValidate.validate` validated items."""
         return self._validated
 
     @property
     def non_validated(self) -> list[str]:
-        """List of unsuccessfully :meth:`lamindb.Curate.validate` items.
+        """List of unsuccessfully :meth:`~lamindb.core.CanValidate.validate` items.
 
         This list can be used to remove any non-validated values such as
         genes that do not map against the specified source.
