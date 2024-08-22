@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+💄 Simpler icons | [83](https://github.com/laminlabs/lamin-utils/pull/83) | [sunnyosun](https://github.com/sunnyosun) | 2024-08-22 |
 ✨ Improve InspectResult docs and improve typing | [80](https://github.com/laminlabs/lamin-utils/pull/80) | [Zethson](https://github.com/Zethson) | 2024-08-06 |
 ✨Ruff config | [78](https://github.com/laminlabs/lamin-utils/pull/78) | [Zethson](https://github.com/Zethson) | 2024-08-06 |
 ✨ Add `logger.mute()` | [77](https://github.com/laminlabs/lamin-utils/pull/77) | [falexwolf](https://github.com/falexwolf) | 2024-04-19 | 0.13.2
