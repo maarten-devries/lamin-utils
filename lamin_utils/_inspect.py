@@ -203,7 +203,7 @@ def _validate_logging(result: InspectResult, field: str | None = None) -> None:
     success_msg = ""
     if len(result.validated) > 0:
         success_msg = (
-            f"{colors.green(f'{len(result.validated)} term{s}')} ({result.frac_validated:.2f}%)"
+            f"{colors.green(f'{len(result.validated)} unique term{s}')} ({result.frac_validated:.2f}%)"
             f" {are} validated{field_msg}"
         )
     if result.frac_validated < 100:
@@ -213,7 +213,7 @@ def _validate_logging(result: InspectResult, field: str | None = None) -> None:
         if len(result.non_validated) > 20:
             print_values += ", ..."
         warn_msg = (
-            f"{colors.yellow(f'{len(result.non_validated)} term{s}')} ({(100-result.frac_validated):.2f}%)"
+            f"{colors.yellow(f'{len(result.non_validated)} unique term{s}')} ({(100-result.frac_validated):.2f}%)"
             f" {are} not validated{field_msg}: {colors.yellow(print_values)}"
         )
         if len(empty_warn_msg) > 0:
@@ -298,7 +298,7 @@ def inspect(
                     print_values += ", ..."
                 s = "" if len(synonyms_mapper) == 1 else "s"
                 labels = colors.yellow(
-                    f"{len(synonyms_mapper)} terms with {msg_casing}synonym{s}"
+                    f"{len(synonyms_mapper)} unique terms with {msg_casing}synonym{s}"
                 )
                 info_msg = f"detected {labels}: {colors.yellow(print_values)}"
                 result._synonyms_mapper = synonyms_mapper
