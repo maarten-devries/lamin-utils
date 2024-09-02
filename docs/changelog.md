@@ -3,6 +3,7 @@
 <!-- prettier-ignore -->
 Name | PR | Developer | Date | Version
 --- | --- | --- | --- | ---
+🐛 Improve validate and standardize logging wording | [84](https://github.com/laminlabs/lamin-utils/pull/84) | [Zethson](https://github.com/Zethson) | 2024-09-02 |
 💄 Simpler icons | [83](https://github.com/laminlabs/lamin-utils/pull/83) | [sunnyosun](https://github.com/sunnyosun) | 2024-08-22 |
 ✨ Improve InspectResult docs and improve typing | [80](https://github.com/laminlabs/lamin-utils/pull/80) | [Zethson](https://github.com/Zethson) | 2024-08-06 |
 ✨Ruff config | [78](https://github.com/laminlabs/lamin-utils/pull/78) | [Zethson](https://github.com/Zethson) | 2024-08-06 |
