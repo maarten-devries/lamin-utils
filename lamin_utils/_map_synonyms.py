@@ -51,7 +51,12 @@ def map_synonyms(
 
     # empty DataFrame or input
     n_input = len(identifiers)
-    if df.shape[0] == 0 or n_input == 0:
+    if (
+        df.shape[0] == 0
+        or n_input == 0
+        or synonyms_field is None
+        or synonyms_field == "None"
+    ):
         if return_mapper:
             return {}
         else:
