@@ -1,4 +1,5 @@
 import re
+import keyword
 from collections import namedtuple
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
@@ -106,6 +107,9 @@ class Lookup:
     def _create_lookup_dict(self, lkeys: Dict, df_dict: Dict) -> Dict:
         lkey_dict: Dict = {}  # a dict of namedtuples as records and lookup keys as keys
         for lkey, values in lkeys.items():
+            # Don't add Python reserved keywords to the lookup dict
+            if lkey in keyword.kwlist:
+                continue
             if isinstance(values, list):
                 combined_list = []
                 for v in values:
